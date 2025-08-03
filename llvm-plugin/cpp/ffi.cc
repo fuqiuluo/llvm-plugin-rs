@@ -118,7 +118,7 @@ auto passBuilderAddOptimizerLastEPCallback(
 
   Builder.registerOptimizerLastEPCallback(
       [Data = std::move(Data), Callback](llvm::ModulePassManager &PassManager,
-#if (LLVM_VERSION_MAJOR >= 20)
+#if (LLVM_VERSION_MAJOR >= 20 && LLVM_VERSION_MINOR >= 1)
                                          LlvmOptLevel Opt,
                                          llvm::ThinOrFullLTOPhase) {
 #else
@@ -139,7 +139,7 @@ auto passBuilderAddOptimizerEarlyEPCallback(
 
   Builder.registerOptimizerEarlyEPCallback(
       [Data = std::move(Data), Callback](llvm::ModulePassManager &PassManager,
-#if (LLVM_VERSION_MAJOR >= 20)
+#if (LLVM_VERSION_MAJOR >= 20 && LLVM_VERSION_MINOR >= 1)
                                          LlvmOptLevel Opt,
                                          llvm::ThinOrFullLTOPhase) {
 #else
@@ -161,7 +161,7 @@ auto passBuilderAddPipelineEarlySimplificationEPCallback(
 
   Builder.registerPipelineEarlySimplificationEPCallback(
       [Data = std::move(Data), Callback](llvm::ModulePassManager &PassManager,
-#if (LLVM_VERSION_MAJOR >= 20)
+#if (LLVM_VERSION_MAJOR >= 20 && LLVM_VERSION_MINOR >= 1)
                                          LlvmOptLevel Opt,
                                          llvm::ThinOrFullLTOPhase) {
 #else
