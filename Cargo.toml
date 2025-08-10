@@ -3,4 +3,4 @@ resolver = "2"
 members = ["llvm-plugin", "llvm-plugin-macros"]
 
 [patch.crates-io]
-inkwell = { git = "https://github.com/stevefan1999-personal/inkwell" }
+inkwell = { git = "https://github.com/fuqiuluo/inkwell" }
