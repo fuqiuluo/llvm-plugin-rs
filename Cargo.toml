@@ -1,3 +1,7 @@
 [workspace]
 resolver = "2"
 members = ["llvm-plugin", "llvm-plugin-macros"]
+
+[patch.crates-io]
+inkwell = { git = "https://github.com/fuqiuluo/inkwell", rev = "a30816bd721e24a0882e3fe994125c2829d9021a" }
+
