@@ -11,6 +11,7 @@ extern "C" {
         feature = "llvm18-1",
         feature = "llvm19-1",
         feature = "llvm20-1",
+        feature = "llvm21-1"
     ))]
     pub(crate) fn passBuilderAddFullLinkTimeOptimizationLastEPCallback(
         builder: *mut c_void,
@@ -26,6 +27,7 @@ extern "C" {
         feature = "llvm18-1",
         feature = "llvm19-1",
         feature = "llvm20-1",
+        feature = "llvm21-1"
     ))]
     pub(crate) fn passBuilderAddFullLinkTimeOptimizationEarlyEPCallback(
         builder: *mut c_void,
@@ -41,6 +43,7 @@ extern "C" {
         feature = "llvm18-1",
         feature = "llvm19-1",
         feature = "llvm20-1",
+        feature = "llvm21-1"
     ))]
     pub(crate) fn passBuilderAddOptimizerEarlyEPCallback(
         builder: *mut c_void,
@@ -70,6 +73,7 @@ extern "C" {
         feature = "llvm18-1",
         feature = "llvm19-1",
         feature = "llvm20-1",
+        feature = "llvm21-1"
     ))]
     pub(crate) fn passBuilderAddOptimizerLastEPCallback(
         builder: *mut c_void,
@@ -98,6 +102,7 @@ extern "C" {
         feature = "llvm18-1",
         feature = "llvm19-1",
         feature = "llvm20-1",
+        feature = "llvm21-1"
     ))]
     pub(crate) fn passBuilderAddPipelineEarlySimplificationEPCallback(
         builder: *mut c_void,
@@ -126,6 +131,7 @@ extern "C" {
         feature = "llvm18-1",
         feature = "llvm19-1",
         feature = "llvm20-1",
+        feature = "llvm21-1"
     ))]
     pub(crate) fn passBuilderAddPipelineStartEPCallback(
         builder: *mut c_void,
@@ -200,6 +206,7 @@ extern "C" {
         feature = "llvm18-1",
         feature = "llvm19-1",
         feature = "llvm20-1",
+        feature = "llvm21-1"
     ))]
     pub(crate) fn modulePassManagerIsEmpty(manager: *mut c_void) -> bool;
 
@@ -220,6 +227,7 @@ extern "C" {
         feature = "llvm18-1",
         feature = "llvm19-1",
         feature = "llvm20-1",
+        feature = "llvm21-1"
     ))]
     pub(crate) fn functionPassManagerIsEmpty(manager: *mut c_void) -> bool;
 

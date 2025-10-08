@@ -299,6 +299,7 @@ impl PassBuilder {
         feature = "llvm18-1",
         feature = "llvm19-1",
         feature = "llvm20-1",
+        feature = "llvm21-1"
     ))]
     pub fn add_pipeline_start_ep_callback<T>(&mut self, cb: T)
     where
@@ -525,6 +526,7 @@ impl PassBuilder {
         feature = "llvm18-1",
         feature = "llvm19-1",
         feature = "llvm20-1",
+        feature = "llvm21-1"
     ))]
     pub fn add_full_lto_early_ep_callback<T>(&mut self, cb: T)
     where
@@ -572,6 +574,7 @@ impl PassBuilder {
         feature = "llvm18-1",
         feature = "llvm19-1",
         feature = "llvm20-1",
+        feature = "llvm21-1"
     ))]
     pub fn add_full_lto_last_ep_callback<T>(&mut self, cb: T)
     where
