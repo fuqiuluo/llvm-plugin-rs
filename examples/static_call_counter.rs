@@ -4,7 +4,7 @@
 use std::collections::HashMap;
 
 use either::Either;
-
+use inkwell::values::Operand;
 use llvm_plugin::inkwell::module::Module;
 use llvm_plugin::inkwell::values::{BasicValueEnum, InstructionOpcode};
 use llvm_plugin::{
@@ -52,9 +52,14 @@ impl LlvmModuleAnalysis for StaticCallCounterAnalysis {
                     }
 
                     let ptr = match instr.get_operand(1) {
-                        Some(Either::Left(BasicValueEnum::PointerValue(ptr))) => ptr,
+                        Some(Operand::Value(BasicValueEnum::PointerValue(ptr))) => ptr,
                         _ => continue,
                     };
+
+                    // let ptr = match instr.get_operand(1) {
+                    //     Some(Either::Left(BasicValueEnum::PointerValue(ptr))) => ptr,
+                    //     _ => continue,
+                    // };
 
                     let name = ptr.get_name().to_bytes();
                     if !name.is_empty() {

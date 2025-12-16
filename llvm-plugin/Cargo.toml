@@ -55,7 +55,9 @@ target-riscv = ["inkwell/target-riscv"]
 target-all = ["inkwell/target-all"]
 
 [dependencies]
-inkwell = { git = "https://github.com/Ylarod/inkwell" }
+# 版本过低不支持llvm@21, 先注释了
+# inkwell = { git = "https://github.com/Ylarod/inkwell" }
+inkwell = "0.7.1"
 llvm-plugin-macros = { path = "../llvm-plugin-macros", version = "0.2", optional = true }
 
 [build-dependencies]
