@@ -16,7 +16,7 @@ features = ["llvm15-0"]
 rustdoc-args = ["--cfg", "docsrs"]
 
 [features]
-default = ["macros", "target-all"]
+default = ["macros", "target-all", "llvm21-1"]
 macros = ["llvm-plugin-macros"]
 
 # On Windows, llvm plugins require linking with either opt.lib,

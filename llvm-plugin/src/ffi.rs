@@ -49,12 +49,12 @@ extern "C" {
         builder: *mut c_void,
         cb: *const c_void,
         cb_deleter: extern "C" fn(*const c_void),
-        #[cfg(not(feature = "llvm20-1"))] cb_sys: extern "C" fn(
+        #[cfg(not(any(feature = "llvm20-1", feature = "llvm21-1")))] cb_sys: extern "C" fn(
             *const c_void,
             *mut c_void,
             crate::OptimizationLevel,
         ),
-        #[cfg(feature = "llvm20-1")] cb_sys: extern "C" fn(
+        #[cfg(any(feature = "llvm20-1", feature = "llvm21-1"))] cb_sys: extern "C" fn(
             *const c_void,
             *mut c_void,
             crate::OptimizationLevel,
@@ -79,12 +79,12 @@ extern "C" {
         builder: *mut c_void,
         cb: *const c_void,
         cb_deleter: extern "C" fn(*const c_void),
-        #[cfg(not(feature = "llvm20-1"))] cb_sys: extern "C" fn(
+        #[cfg(not(any(feature = "llvm20-1", feature = "llvm21-1")))] cb_sys: extern "C" fn(
             *const c_void,
             *mut c_void,
             crate::OptimizationLevel,
         ),
-        #[cfg(feature = "llvm20-1")] cb_sys: extern "C" fn(
+        #[cfg(any(feature = "llvm20-1", feature = "llvm21-1"))] cb_sys: extern "C" fn(
             *const c_void,
             *mut c_void,
             crate::OptimizationLevel,
@@ -108,12 +108,12 @@ extern "C" {
         builder: *mut c_void,
         cb: *const c_void,
         cb_deleter: extern "C" fn(*const c_void),
-        #[cfg(not(feature = "llvm20-1"))] cb_sys: extern "C" fn(
+        #[cfg(not(any(feature = "llvm20-1", feature = "llvm21-1")))] cb_sys: extern "C" fn(
             *const c_void,
             *mut c_void,
             crate::OptimizationLevel,
         ),
-        #[cfg(feature = "llvm20-1")] cb_sys: extern "C" fn(
+        #[cfg(any(feature = "llvm20-1", feature = "llvm21-1"))] cb_sys: extern "C" fn(
             *const c_void,
             *mut c_void,
             crate::OptimizationLevel,
